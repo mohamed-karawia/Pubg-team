@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pubg</title>
+</head>
+
+<body>
+    <nav class="user-nav">
+        <div class="user-nav__elements" dir="rtl">
+            <ul class="user-nav__elements__list">
+                <li class="user-nav__elements__list__item"><img src="./assets/logo.png" alt=""></li>
+                <li class="user-nav__elements__list__item"><a href="#">الرئيسية</a></li>
+                <li class="user-nav__elements__list__item"><a href="#">البطولات</a></li>
+                <li class="user-nav__elements__list__item"><a href="#">الانجازات</a></li>
+                <li class="user-nav__elements__list__item"><a href="#">الفرق</a></li>
+                <li class="user-nav__elements__list__item"><a href="#">من نحن</a></li>
+            </ul>
+            <svg class="user-nav__elements__menu--icon" onclick="openMobileMenu()">
+                <use xlink:href="assets/sprite.svg#icon-menu"></use>
+            </svg>
+            <div class="user-nav__elements__buttons">
+                <button class="lang">
+                    <p>ع</p>
+                    <svg class="user-nav__icon">
+                        <use xlink:href="assets/sprite.svg#icon-keyboard_arrow_down"></use>
+                    </svg>
+                </button>
+                <button class="member">كن عضوا معنا</button>
+            </div>
+        </div>
+        <div class="user-nav__sub"></div>
+
+        <div class="user-nav__mobile" id="mobile">
+            <ul class="user-nav__mobile__list">
+                <li class="user-nav__mobile__list__item"><a href="#">الرئيسية</a></li>
+                <li class="user-nav__mobile__list__item"><a href="#">البطولات</a></li>
+                <li class="user-nav__mobile__list__item"><a href="#">الانجازات</a></li>
+                <li class="user-nav__mobile__list__item"><a href="#">الفرق</a></li>
+                <li class="user-nav__mobile__list__item"><a href="#">من نحن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="club">
+        <img src="./assets/motor.png" alt="">
+        <div class="club__details" dir="rtl">
+            <div class="club__details__text">
+                <h1>نادي الثلاثي الرياضي</h1>
+                <p>نادي الثلاثي الرياضي المعتمد من قبل الاتحاد السعودي للرياضيات الذهنية والالكترونية. غايتنا توفير منصة
+                    متكاملة للجميع ليتألق فيها الأفضل وطموحنا عنان السماء.</p>
+            </div>
+            <div class="club__details__buttons">
+                <button class="club__details__buttons__btn">
+                    مشاهدة المباريات لايف
+                    <svg class="club__details__buttons__btn__icon">
+                        <use xlink:href="assets/sprite.svg#icon-power"></use>
+                    </svg>
+                </button>
+                <button class="club__details__buttons__btn">
+                    أبدأ اللعب الان
+                    <svg class="club__details__buttons__btn__icon">
+                        <use xlink:href="assets/sprite.svg#icon-power"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="championships">
+        <img class="championships__img" src="./assets/pub-ji.png" alt="pubg">
+
+        <div class="championships__details" dir="rtl">
+            <h2>البطولات</h2>
+            <div class="championships__details__logos">
+                <img class="championships__details__logos__logo" src="./assets/tenscent.png" alt="tenscent-logo">
+                <img class="championships__details__logos__logo" src="./assets/pubg.png" alt="pubg-logo">
+            </div>
+            <div class="championships__details__bottom">
+                <img class="championships__details__logos__bottom" src="./assets/bottom.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="players" dir="rtl">
+        <h2>أفضل لاعب</h2>
+        <ul class="players__cards">
+            <li class="players__cards__card">
+                <div class="players__cards__card__upper">
+                    <img src="./assets/player1.png" alt="">
+                </div>
+                <div class="players__cards__card__lower">
+                    <div class="players__cards__card__lower__text">
+                        <p>عدد القتلى</p>
+                        <p>67</p>
+                    </div>
+                    <div class="players__cards__card__lower__text">
+                        <p>مجموع الدمار</p>
+                        <p>45</p>
+                    </div>
+                </div>
+            </li>
+            <li class="players__cards__card">
+                <div class="players__cards__card__upper">
+                    <img src="./assets/player2.png" alt="">
+                </div>
+                <div class="players__cards__card__lower">
+                    <div class="players__cards__card__lower__text">
+                        <p>عدد القتلى</p>
+                        <p>67</p>
+                    </div>
+                    <div class="players__cards__card__lower__text">
+                        <p>مجموع الدمار</p>
+                        <p>45</p>
+                    </div>
+                </div>
+            </li>
+            <li class="players__cards__card">
+                <div class="players__cards__card__upper">
+                    <img src="./assets/player3.png" alt="">
+                </div>
+                <div class="players__cards__card__lower">
+                    <div class="players__cards__card__lower__text">
+                        <p>عدد القتلى</p>
+                        <p>67</p>
+                    </div>
+                    <div class="players__cards__card__lower__text">
+                        <p>مجموع الدمار</p>
+                        <p>45</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="teams" dir="rtl">
+        <h2>أفضل فريق</h2>
+        <div class="teams__gallery">
+            <img class="teams__gallery--1" src="./assets/teams1.png" alt="">
+            <img class="teams__gallery--2" src="./assets/teams2.png" alt="">
+            <img class="teams__gallery--3" src="./assets/teams3.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="live">
+        <div class="live__live">
+            <p>بث مباشر</p>
+        </div>
+        <h2 dir="rtl">يتم الان عرض حدث الابطال , مع أقوى الفرق</h2>
+        <button>مشاهدة الحدث</button>
+    </section>
+
+    <section class="pictures" dir="rtl">
+        <h2>الصور</h2>
+        <div class="pictures__gallery" dir="ltr">
+            <img class="pictures__gallery--1" src="./assets/gallery1.png" alt="pubg photo">
+            <img class="pictures__gallery--2" src="./assets/gallery2.png" alt="pubg photo">
+            <img class="pictures__gallery--3" src="./assets/gallery3.png" alt="pubg photo">
+            <img class="pictures__gallery--4" src="./assets/gallery4.png" alt="pubg photo">
+            <img class="pictures__gallery--5" src="./assets/gallery5.png" alt="pubg photo">
+        </div>
+    </section>
+
+    <section class="videos" dir="rtl">
+        <h2>الفيديوهات</h2>
+        <div class="videos__videos">
+            <img src="./assets/video1.png" alt="video 1">
+            <img src="./assets/video2.png" alt="video 2">
+        </div>
+    </section>
+
+    <footer class="footer" dir="rtl">
+        <div class="footer__about">
+            <h3>
+                نادي الثلاثي الرياضي المعتمد من ثبل الاتحاد السعودي للرياضيات الذهنية والالكترونية. غايتنا توفير منصة
+                متكاملة للجميع ليتألق فيهال الأفضل وطموحنا عنان السماء
+            </h3>
+            <button class="footer__about__button">
+                كن عضوا معنا
+            </button>
+        </div>
+        <div class="footer__contact">
+            <div class="footer__contact__container">
+            <h3>طرق التواصل</h3>
+            <div class="footer__contact__container__line">
+                <svg class="footer__contact__container__line__icon">
+                    <use xlink:href="assets/sprite.svg#icon-phone"></use>
+                </svg>
+                <p class="footer__contact__container__line__text">‫‪0102358967678‬‬</p>
+            </div>
+
+            <div class="footer__contact__container__line">
+                <svg class="footer__contact__container__line__icon">
+                    <use xlink:href="assets/sprite.svg#icon-whatsapp"></use>
+                </svg>
+                <p class="footer__contact__container__line__text">‫‪0102358967678‬‬</p>
+            </div>
+
+            <div class="footer__contact__container__line">
+                <svg class="footer__contact__container__line__icon">
+                    <use xlink:href="assets/sprite.svg#icon-envelope"></use>
+                </svg>
+                <p class="footer__contact__container__line__text">‫‪pupge32@gamil.com‬‬</p>
+            </div>
+
+            <button class="footer__contact__container__button">
+                اتصل بنا
+            </button>
+        </div>
+        </div>
+        <div class="footer__logo">
+            <img class="footer__logo__logo" src="./assets/logo.png" alt="logo">
+            <h3>اسم الموقع</h3>
+            <div class="footer__logo__icons">
+                <object data="assets/discord.svg" class="footer__logo__icons__icon"> </object>
+                <svg class="footer__logo__icons__icon">
+                    <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+                </svg>
+                <svg class="footer__logo__icons__icon">
+                    <use xlink:href="assets/sprite.svg#icon-twitter"></use>
+                </svg>
+                <svg class="footer__logo__icons__icon">
+                    <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/index.js"></script>
+</body>
+
+</html>

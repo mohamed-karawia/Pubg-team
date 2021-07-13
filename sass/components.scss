@@ -1,0 +1,742 @@
+/******************Navbar************************/
+.user-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__elements {
+        background-color: $dark-blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 7.4rem;
+        padding: 0 20rem;
+        position: relative;
+
+        @media only screen and (max-width: 1115px) {
+            padding: 0 1rem;
+            align-items: center;
+        }
+
+        &__list {
+            position: absolute;
+            top: 20%;
+            list-style: none;
+            min-width: 50rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__item {
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+
+                img{
+                    width: 10rem;
+                    margin-left: 2rem;
+                }
+            }
+
+            @media only screen and (max-width: 1115px) {
+                display: none;
+            }
+        }
+
+        &__menu--icon {
+            fill: white;
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+
+            @media only screen and (min-width: 1115px) {
+                display: none;
+            }
+        }
+
+        &__buttons {
+            position: absolute;
+            left: 20rem;
+            height: 100%;
+            top: 70%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+
+            @media only screen and (max-width: 1115px) {
+                left: 2rem;
+            }
+
+            &>* {
+                cursor: pointer;
+            }
+
+            .lang {
+                width: 4.1rem;
+                height: 4.1rem;
+                border-radius: 100%;
+                background-color: transparent;
+                color: white;
+                border: 2px solid $yellow;
+                font-size: 1.8rem;
+                font-weight: 200;
+                transition: all .3s;
+
+                &:hover{
+                    background-color: $yellow;
+                    color: white;
+                }
+
+                .user-nav__icon {
+                    fill: $yellow;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            .member {
+                @include purple-button;
+                margin-right: 1rem;
+
+                @media only screen and (max-width: 1115px) {
+                    width: 15rem;
+                }
+            }
+        }
+    }
+
+    &__sub {
+        background-color: $light-blue;
+        height: 2.2rem;
+
+        @media only screen and (max-width: 1115px) {
+            display: none;
+        }
+    }
+
+    /******************Mobile Nav************************/
+
+    &__mobile {
+        background-color: $dark-blue;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        padding: 3rem 0;
+        transition: all .3s;
+        z-index: 999;
+
+
+
+        &__list {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__mobile.active {
+        top: 7.4rem;
+    }
+}
+
+/*********************Club section*************************/
+.club {
+    min-height: 100vh;
+    background-image: url(../assets/background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 8rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1115px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__details {
+        max-width: 50rem;
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+        @media only screen and (max-width: 1115px) {
+            order: 1;
+            margin-top: 2rem;
+        }
+
+        &__text {
+
+
+            h1 {
+                color: white;
+                font-size: 4rem;
+                animation: slideDown .5s;
+            }
+
+            p {
+                margin-top: 2rem;
+                color: white;
+                font-size: 2rem;
+                animation: slideLeft 1s .5s;
+                animation-fill-mode: backwards;
+            }
+        }
+
+        &__buttons {
+            margin-top: 2rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-template-rows: 6rem;
+            justify-content: center;
+            animation: slideLeft 1s .5s;
+            animation-fill-mode: backwards;
+
+            &__btn {
+                @include yellow-button;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__icon {
+                    fill: $purple;
+                    width: 3rem;
+                    height: 3rem;
+                    margin-right: .6rem;
+                    margin-top: 1rem;
+                }
+            }
+
+        }
+    }
+
+    img {
+        animation: slideRight 1s .5s;
+        animation-fill-mode: backwards;
+        width: 55%;
+        min-width: 40rem;
+        transform: rotateX(180deg);
+        margin-bottom: -5rem;
+
+        @media only screen and (max-width: 1115px) {
+            order: 2;
+
+        }
+    }
+}
+
+/*******************Championsiphs section*************************************/
+.championships {
+    background-image: url('../assets/back\ gro@1X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    &__details {
+        padding: 9rem 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 943px) {
+            height: 100vh;
+            align-items: center;
+            padding: 1.5rem;
+            justify-content: space-around;
+        }
+
+        h2 {
+            @include h2;
+
+        }
+
+        &__logos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            &__logo {
+                width: 15rem;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    transform: scale(1.1)
+                }
+            }
+
+        }
+
+        &__bottom {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            @media only screen and (max-width: 943px) {
+                justify-content: center;
+                width: 100%;
+            }
+
+            img {
+                width: 35rem;
+
+                @media only screen and (max-width: 943px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 943px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*******************Players Section*****************************/
+.players {
+    min-height: 100vh;
+    background-color: $light-yellow;
+    padding: 2rem 12rem;
+    background-image: url('../assets/small-bg.png');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    @media only screen and (max-width: 942px) {
+        padding: 2rem;
+    }
+
+    h2 {
+        @include h2;
+    }
+
+    &__cards {
+
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+
+        @media only screen and (max-width: 942px) {
+            flex-direction: column;
+        }
+
+        &__card {
+            @include shadow(10px);
+            width: 25rem;
+            transition: all .3s;
+
+            &:hover {
+                @include shadow(20px);
+                transform: scale(1.1)
+            }
+
+            @media only screen and (max-width: 942px) {
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+
+            &__upper {
+
+                background-color: $yellow;
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__lower {
+                background-color: white;
+                padding: 2rem;
+
+                &__text {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: $purple;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************************Teams Section*************************************/
+.teams {
+    padding: 2rem 12rem;
+    background-image: url('../assets/teams-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (max-width: 840px) {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+        color: white;
+    }
+
+    &__gallery {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 40rem 40rem;
+        grid-column-gap: 2rem;
+        grid-template-rows: 30rem 30rem;
+        row-gap: 2rem;
+
+        @media only screen and (max-width: 840px) {
+            grid-template-columns: .5fr .5fr;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+
+            transition: all .3s;
+
+            &:hover {
+                @include shadow(20px);
+                transform: scale(1.1)
+            }
+        }
+
+        &--1 {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &--2 {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &--3 {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+/********************live section********************/
+.live {
+    padding: 10rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('../assets/live-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @media only screen and (max-width: 840px) {
+        padding: 10rem 2rem;
+    }
+
+    &__live {
+        position: absolute;
+        top: 3rem;
+        right: 8rem;
+        font-size: 3rem;
+
+        p {
+            color: $yellow;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                background-color: red;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 110%;
+                border-radius: 100%;
+                animation: live 1s infinite;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 5rem;
+        color: white;
+    }
+
+    button {
+        @include yellow-button;
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+/**************Pictures Section********************/
+.pictures {
+    padding: 9rem 10rem;
+    background-image: url('../assets/pics-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (max-width: 1108px) {
+        padding: 9rem 2rem;
+    }
+
+    h2 {
+        color: white;
+        font-size: 5rem;
+    }
+
+    &__gallery {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 35rem 72.3rem;
+        grid-template-rows: repeat(3, 45rem);
+        row-gap: 10px;
+        column-gap: 10px;
+
+        @media only screen and (max-width: 1108px) {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        &--1 {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 1;
+        }
+
+        &--2 {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &--3 {
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        &--4 {
+            grid-row: 3 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        &--5 {
+            grid-row: 3 / span 1;
+            grid-column: 2 / span 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                @include shadow(20px);
+                transform: scale(1.1)
+            }
+        }
+    }
+}
+
+/********************Videos*********************/
+
+.videos {
+    background-color: $dark-gray;
+    padding: 9rem 10rem;
+
+    @media only screen and (max-width: 784px) {
+        padding: 2rem;
+    }
+
+
+    h2 {
+        font-size: 5rem;
+        color: white;
+    }
+
+    &__videos {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: 784px) {
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            width: 100%;
+
+            @media only screen and (max-width: 784px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+}
+
+/*******************Footer**************************/
+.footer {
+    background-color: $light-gray;
+    display: flex;
+    padding: 2rem 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 784px) {
+        flex-direction: column-reverse;
+        align-items: start;
+        padding: 1rem;
+
+        &>* {
+            margin-top: 2rem;
+        }
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-start;
+        padding: 1rem;
+
+        h3 {
+            @include h3;
+        }
+
+        &__button {
+            @include yellow-button;
+            width: 20rem;
+            height: 5rem;
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__contact {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+            h3 {
+                @include h3;
+            }
+
+            &__line {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin-top: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    fill: $light-purple;
+                }
+
+                &__icon {
+                    width: 3rem;
+                    height: 3rem;
+                    fill: $purple;
+                    margin-left: 2rem;
+                    transition: all .2s;
+
+                    &:hover {
+                        fill: $light-purple;
+                    }
+
+                }
+
+                &__text {
+                    color: white;
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__button {
+                @include white-button;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        @media only screen and (max-width: 784px) {
+            align-self: center;
+        }
+
+        h3 {
+            @include h3;
+            margin-top: 1rem;
+        }
+
+        &__icons {
+            display: flex;
+            margin-top: 1rem;
+            width: 100%;
+            justify-content: space-around;
+            padding: 0 4rem;
+
+            &__icon {
+                width: 4rem;
+                height: 4rem;
+                fill: $yellow;
+            }
+        }
+    }
+}
