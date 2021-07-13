@@ -459,6 +459,7 @@ body {
       height: 100%;
       object-fit: cover;
       object-position: center top;
+      cursor: pointer;
       transition: all .3s; }
       .pictures__gallery img:hover {
         box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.281);
@@ -620,3 +621,6 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.slideLeft {
+  animation: slideLeft .5s; }
